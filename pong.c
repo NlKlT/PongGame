@@ -39,7 +39,7 @@ int main() {
       dy = -1;
     }
     draw_pole(mx, my, r1y, r2y, sc1, sc2);
-    if (scanf("%1c%1c", &keyp1, &keyp2) == keychar1) {
+    if (scanf("%1c%1c", &keyp1, &keyp2) == 'W') {
       r1y = rocket1_move(keyp1, r1y);
     } else {
       r2y = rocket2_move(keyp2, r2y);
@@ -75,7 +75,7 @@ void draw_pole(int mx, int my, int r1y, int r2y, int sc1, int sc2) {
       } else if (i == my && j == mx) {
         printf("O");
       } else {
-        if ((i == 0 i == 24) && (j == 0 j == 79)) {
+        if ((i == 0 || i == 24) && (j == 0 && j == 79)) {
           printf("*");
         } else if ((i == 0 || i == 24) && (j != 0 && j != 79)) {
           printf("-");
